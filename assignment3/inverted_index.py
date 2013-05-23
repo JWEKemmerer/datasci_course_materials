@@ -4,7 +4,9 @@ import sys
 mr = MapReduce.MapReduce()
 
 def mapper(record):
+    # key = Document Identifiers
     key = record[0]
+    # value = Document Contents(Text)
     value = record[1]
     words = set(value.split())
     for i in words:
